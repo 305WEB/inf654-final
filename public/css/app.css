@@ -368,6 +368,10 @@ nav .nav-wrapper {
 .titles {
     width: 94%;
 }
+
+iframe {
+  max-width: 100% !important;
+}
 }
 @media only screen and (max-width: 550px) {
 #hurr-prep {
