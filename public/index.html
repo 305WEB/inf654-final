@@ -1,288 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="apple-touch-icon" href="/img/icons/icon-192x192.png" />
-    <meta name="theme-color" content="#005996" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FTL Weather App</title>
-    <link rel="stylesheet" href="/css/materialize.min.css" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/css/app.css" />
-    <script type="text/javascript" src="/js/materialize.min.js"></script>
-    <meta property="og:image" content="/img/icons/icon-192x192.png" />
-    <link rel="manifest" href="/manifest.json" />
-  </head>
 
-  <body>
-    <nav>
-      <div class="nav-wrapper ftl-logo">
-        <a href="/"><span>FTL</span> Weather</a>
-        <span class="right grey-text text-darken-1">
-          <i class="material-icons sidenav-trigger" data-target="side-menu"
-            >menu</i
-          >
-        </span>
-      </div>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" sizes="any" /><!-- link32×32 -->
+  <link rel="icon" href="/img/icon-img/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/img/icon-img/apple-touch-icon.png" /><!-- 180×180 -->
+  <meta name="theme-color" content="#005996" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FTL Weather App</title>
+  <link rel="stylesheet" href="/css/materialize.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/app.css" />
+  <script type="text/javascript" src="/js/materialize.min.js"></script>
+  <meta property="og:image" content="/img/og-image.png" />
+  <link rel="manifest" href="/manifest.json" />
+</head>
 
-    <ul id="side-menu" class="sidenav side-menu">
-      <br />
-      <li>
-        <a href="/" class="waves-effect"
-          ><i class="material-icons">home</i>Home</a
-        >
-      </li>
+<body>
+  <nav>
+    <div class="nav-wrapper ftl-logo">
+      <a href="/"><span>FTL</span> Weather</a>
+      <span class="right grey-text text-darken-1">
+        <i class="material-icons sidenav-trigger" data-target="side-menu">menu</i>
+      </span>
+    </div>
+  </nav>
 
-      <li>
-        <a href="/pages/gov-feeds.html" class="waves-effect"
-          ><i class="material-icons">dashboard</i>GOV RSS Feeds</a
-        >
-      </li>
-
-      <li>
-        <a href="/pages/preparedness.html" class="waves-effect"
-          ><i class="material-icons">add_box</i>Resources</a
-        >
-      </li>
-
-      <li class="logged-in">
-        <a
-          id="flg-user-account"
-          href="#"
-          class="waves-effect modal-trigger"
-          data-target="modal-account"
-          ><i class="material-icons">account_box</i>Account</a
-        >
-      </li>
-
-      <li class="logged-in">
-        <a href="#" class="waves-effect" id="logout"><i class="material-icons">logout</i>Log Out</a>
-      </li>
-
-      <li class="logged-out">
-        <a href="#" class="waves-effect modal-trigger" data-target="modal-login"
-          ><i class="material-icons">login</i>LogIn</a
-        >
-      </li>
-
-      <li class="logged-out">
-        <a
-          href="#"
-          class="waves-effect modal-trigger"
-          data-target="modal-signup"
-          ><i class="material-icons">app_registration</i>Sign Up</a
-        >
-      </li>
-
-      <li>
-        <a
-          href="mailto:contact@ftl.com?subject=Contact from FTL Weather App"
-          target="_blank"
-          class="waves-effect"
-          ><i class="material-icons">mail_outline</i>Contact</a
-        >
-      </li>
-    </ul>
-
-    <br /><br /><br />
-
-    <!-- NOTIFICATIONS -->
+  <ul id="side-menu" class="sidenav side-menu">
     <br />
+    <li>
+      <a href="/" class="waves-effect"><i class="material-icons">home</i>Home</a>
+    </li>
 
-    <div id="top-notification-area">
-      <ul>
-        <li>
-          <button id="enable" class="btn btn-small z-depth-0" type="button">
-            > Enable Notifications
-          </button>
-        </li>
+    <li>
+      <a href="/pages/gov-feeds.html" class="waves-effect"><i class="material-icons">dashboard</i>GOV RSS Feeds</a>
+    </li>
 
-        <li>
-          <!-- <div id="toolbar">
+    <li>
+      <a href="/pages/preparedness.html" class="waves-effect"><i class="material-icons">add_box</i>Resources</a>
+    </li>
+
+    <li class="logged-in">
+      <a id="flg-user-account" href="#" class="waves-effect modal-trigger" data-target="modal-account"><i
+          class="material-icons">account_box</i>Account</a>
+    </li>
+
+    <li class="logged-in">
+      <a href="#" class="waves-effect" id="logout"><i class="material-icons">logout</i>Log Out</a>
+    </li>
+
+    <li class="logged-out">
+      <a href="#" class="waves-effect modal-trigger" data-target="modal-login"><i
+          class="material-icons">login</i>LogIn</a>
+    </li>
+
+    <li class="logged-out">
+      <a href="#" class="waves-effect modal-trigger" data-target="modal-signup"><i
+          class="material-icons">app_registration</i>Sign Up</a>
+    </li>
+
+    <li>
+      <a href="mailto:contact@ftl.com?subject=Contact from FTL Weather App" target="_blank" class="waves-effect"><i
+          class="material-icons">mail_outline</i>Contact</a>
+    </li>
+  </ul>
+
+  <br /><br /><br />
+
+  <!-- NOTIFICATIONS -->
+  <br />
+
+  <div id="top-notification-area">
+    <ul>
+      <li>
+        <button id="enable" class="btn btn-small z-depth-0" type="button">
+          > Enable Notifications
+        </button>
+      </li>
+
+      <li>
+        <!-- <div id="toolbar">
             <ul id="notifications"></ul>
           </div> -->
-        </li>
-      </ul>
-    </div>
-    <!-- Windly  -->
+      </li>
+    </ul>
+  </div>
+  <!-- Windly  -->
 
-    <h5 class="z-depth-0 feed-head head-1">Fort Lauderdale Weather Forecast</h5>
+  <h5 class="z-depth-0 feed-head head-1">Fort Lauderdale Weather Forecast</h5>
 
-    <div class="flg-resp-container windly">
-      <link
-        href="https://www.fortlauderdale.gov/home/showpublisheddocument/67879/637991800836900000"
-        rel="stylesheet"
-      />
-      <iframe
-        title="Windly Forecast"
-        src="https://embed.windy.com/embed2.html?lat=25.867&amp;lon=-80.123&amp;detailLat=26.090&amp;detailLon=-80.123&amp;width=650&amp;height=450&amp;zoom=9&amp;level=surface&amp;overlay=wind&amp;product=ecmwf&amp;menu=&amp;message=&amp;marker=&amp;calendar=now&amp;pressure=&amp;type=map&amp;location=coordinates&amp;detail=true&amp;metricWind=default&amp;metricTemp=default&amp;radarRange=-1"
-        width="950"
-        height="600"
-        frameborder="0"
-      ></iframe>
-    </div>
+  <div class="flg-resp-container windly">
+    <link href="https://www.fortlauderdale.gov/home/showpublisheddocument/67879/637991800836900000" rel="stylesheet" />
+    <iframe title="Windly Forecast"
+      src="https://embed.windy.com/embed2.html?lat=25.867&amp;lon=-80.123&amp;detailLat=26.090&amp;detailLon=-80.123&amp;width=650&amp;height=450&amp;zoom=9&amp;level=surface&amp;overlay=wind&amp;product=ecmwf&amp;menu=&amp;message=&amp;marker=&amp;calendar=now&amp;pressure=&amp;type=map&amp;location=coordinates&amp;detail=true&amp;metricWind=default&amp;metricTemp=default&amp;radarRange=-1"
+      width="950" height="600" frameborder="0"></iframe>
+  </div>
 
-    <br />
-    <br />
+  <br />
+  <br />
 
-    <h5 class="titles">Fort Lauderdale Weather:</h5>
+  <h5 class="titles">Fort Lauderdale Weather:</h5>
 
-    <p class="text">In much of Florida, the climate is sub-tropical, with mild winters (but subject to short cold spells) and hot, sunny summers. Summer, from June to September, 
-      is also muggy and with frequent thunderstorms. In the far south, where Miami is located, 
-      the climate is tropical, since the average temperature in January reaches 20 °C (68 °F). In summer and early autumn, Florida is prone to hurricanes. The above application will help you
+  <p class="text">In much of Florida, the climate is sub-tropical, with mild winters (but subject to short cold spells)
+    and hot, sunny summers. Summer, from June to September,
+    is also muggy and with frequent thunderstorms. In the far south, where Miami is located,
+    the climate is tropical, since the average temperature in January reaches 20 °C (68 °F). In summer and early autumn,
+    Florida is prone to hurricanes. The above application will help you
     to have a more accurate daily weather outlook.</p>
-    <br />
+  <br />
 
-    <h5 class="z-depth-0 feed-head head-1">Emergency Supply List</h5>
+  <h5 class="z-depth-0 feed-head head-1">Emergency Supply List</h5>
 
-    <div class="list-items-cont">
-      <!-- <h7 style="color: var(--blue); margin-left: 10px; display: block;">Create your Own Supply List:</h7> -->
-      <!-- <p class="head-3">Use the + button below to Add Items</p> -->
+  <div class="list-items-cont">
+    <!-- <h7 style="color: var(--blue); margin-left: 10px; display: block;">Create your Own Supply List:</h7> -->
+    <!-- <p class="head-3">Use the + button below to Add Items</p> -->
 
-      <!------------------------------------------------------------- LIST ITEMS CONTAINER  -->
+    <!------------------------------------------------------------- LIST ITEMS CONTAINER  -->
 
-      <!-- <hr class="hr-divider"/> -->
-      <div class="tasks container"></div>
-      <hr class="hr-divider" />
-      <div class="center">
-        <a
-          class="btn-floating btn-small btn-large add-btn sidenav-trigger blue darken-4"
-          data-target="side-form"
-        >
-          <i class="material-icons">add</i>
-        </a>
-        <p>Add Items</p>
-      </div>
-
-      <div id="side-form" class="sidenav side-form">
-        <form class="add-task container section">
-          <h6>New Item</h6>
-          <div class="divider"></div>
-          <div class="input-field">
-            <input
-              placeholder="Enter Task title"
-              id="title"
-              class="validate"
-              type="text"
-            />
-            <label for="title">Item Title</label>
-          </div>
-          <div class="input-field">
-            <input
-              placeholder="Enter Task description"
-              id="description"
-              class="validate"
-              type="text"
-            />
-            <label for="description">Item Description</label>
-          </div>
-
-          <div class="input-field center">
-            <button class="btn-small">Add</button>
-          </div>
-        </form>
-      </div>
+    <!-- <hr class="hr-divider"/> -->
+    <div class="tasks container"></div>
+    <hr class="hr-divider" />
+    <div class="center">
+      <a class="btn-floating btn-small btn-large add-btn sidenav-trigger blue darken-4" data-target="side-form">
+        <i class="material-icons">add</i>
+      </a>
+      <p>Add Items</p>
     </div>
 
-    <br/><br/><br/>
-
-    <h5 class="titles">Hurricane Preparedness:</h5>
-
-    <p class="text">Being prepared means being equipped with the proper supplies you may need in the event of 
-      an emergency or disaster. Keep your supplies in an easy-to-carry emergency preparedness kit that 
-      you can use at home or take with you in case you must evacuate. Feel free to use our Emergency Supply 
-      List application above to build your own kit.</p>
-    <br />
-
-    <!-- Weather Bug Forecast -->
-    <h5 class="z-depth-0 feed-head head-1">WeatherBug Forecast</h5>
-    <div style="overflow: hidden; margin: -14px auto 88px; max-width: 1260px">
-      <iframe
-        id="weather-bug"
-        title="Weather Bug Forecast"
-        src="https://www.weatherbug.com/weather-forecast/now/fort-lauderdale-fl-33317"
-      ></iframe>
-
-    </div>
-
-    <h5 class="titles">WeatherBug Forecast:</h5>
-
-    <p class="text" style="margin-bottom: 3em;">Tullamcorper a lacus vestibulum sed arcu non odio euismod lacinia at quis risus sed vulputate odio ut enim blandit volutpat maecenas volutpat blandit 
-      aliquam etiam erat velit scelerisque in dictum non consectetur a erat nam at lectus urna duis convallis convallis tellus id interdum velit laoreet id donec ultrices.</p>
-
-   
-
-    <!--------------------------- SIGN UP MODAL -->
-
-    <div id="modal-signup" class="modal">
-      <div class="modal-content">
-        <h4>Sign Up</h4>
-        <form id="signup-form">
-          <div class="input-field">
-            <input type="email" id="signup-email" required />
-            <label for="signup-email">Email Address</label>
-          </div>
-
-          <div class="input-field">
-            <input type="password" id="signup-password" required />
-            <label for="signup-password">Choose Password</label>
-          </div>
-          <button class="btn btn-small z-depth-0">Sign Up</button>
-        </form>
-      </div>
-    </div>
-
-    <!--------------------------- LOGIN MODAL -->
-
-    <div id="modal-login" class="modal">
-      <div class="modal-content">
-        <h4>Log In</h4>
-        <form id="login-form">
-          <div class="input-field">
-            <input type="email" id="login-email" required />
-            <label for="login-email">Email Address</label>
-          </div>
-
-          <div class="input-field">
-            <input type="password" id="login-password" required />
-            <label for="login-password">Enter Your Password</label>
-          </div>
-          <button class="btn btn-small z-depth-0">Log In</button>
-        </form>
-      </div>
-    </div>
-    <!--------------------------- ACCOUNT  MODAL -->
-
-    <div id="modal-account" class="modal">
-      <div class="modal-content">
-        <h5 class="titles">Account Details</h5>
-        <br />
-        <div class="account-details">
-          <h6><span class="flg-user-sign"></span></h6>
-          <h6><span class="flg-user-id"></span></h6>
-          <h6><span class="flg-user-email"></span></h6>
-          <button class="btn-account btn btn-small z-depth-0">Close</button>
+    <div id="side-form" class="sidenav side-form">
+      <form class="add-task container section">
+        <h6>New Item</h6>
+        <div class="divider"></div>
+        <div class="input-field">
+          <input placeholder="Enter Task title" id="title" class="validate" type="text" />
+          <label for="title">Item Title</label>
         </div>
+        <div class="input-field">
+          <input placeholder="Enter Task description" id="description" class="validate" type="text" />
+          <label for="description">Item Description</label>
+        </div>
+
+        <div class="input-field center">
+          <button class="btn-small">Add</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <br /><br /><br />
+
+  <h5 class="titles">Hurricane Preparedness:</h5>
+
+  <p class="text">Being prepared means being equipped with the proper supplies you may need in the event of
+    an emergency or disaster. Keep your supplies in an easy-to-carry emergency preparedness kit that
+    you can use at home or take with you in case you must evacuate. Feel free to use our Emergency Supply
+    List application above to build your own kit.</p>
+  <br />
+
+  <!-- Weather Bug Forecast -->
+  <h5 class="z-depth-0 feed-head head-1">WeatherBug Forecast</h5>
+  <div style="overflow: hidden; margin: -14px auto 88px; max-width: 1260px">
+    <iframe id="weather-bug" title="Weather Bug Forecast"
+      src="https://www.weatherbug.com/weather-forecast/now/fort-lauderdale-fl-33317"></iframe>
+
+  </div>
+
+  <h5 class="titles">WeatherBug Forecast:</h5>
+
+  <p class="text" style="margin-bottom: 3em;">Tullamcorper a lacus vestibulum sed arcu non odio euismod lacinia at quis
+    risus sed vulputate odio ut enim blandit volutpat maecenas volutpat blandit
+    aliquam etiam erat velit scelerisque in dictum non consectetur a erat nam at lectus urna duis convallis convallis
+    tellus id interdum velit laoreet id donec ultrices.</p>
+
+
+
+  <!--------------------------- SIGN UP MODAL -->
+
+  <div id="modal-signup" class="modal">
+    <div class="modal-content">
+      <h4>Sign Up</h4>
+      <form id="signup-form">
+        <div class="input-field">
+          <input type="email" id="signup-email" required />
+          <label for="signup-email">Email Address</label>
+        </div>
+
+        <div class="input-field">
+          <input type="password" id="signup-password" required />
+          <label for="signup-password">Choose Password</label>
+        </div>
+        <button class="btn btn-small z-depth-0">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+  <!--------------------------- LOGIN MODAL -->
+
+  <div id="modal-login" class="modal">
+    <div class="modal-content">
+      <h4>Log In</h4>
+      <form id="login-form">
+        <div class="input-field">
+          <input type="email" id="login-email" required />
+          <label for="login-email">Email Address</label>
+        </div>
+
+        <div class="input-field">
+          <input type="password" id="login-password" required />
+          <label for="login-password">Enter Your Password</label>
+        </div>
+        <button class="btn btn-small z-depth-0">Log In</button>
+      </form>
+    </div>
+  </div>
+  <!--------------------------- ACCOUNT  MODAL -->
+
+  <div id="modal-account" class="modal">
+    <div class="modal-content">
+      <h5 class="titles">Account Details</h5>
+      <br />
+      <div class="account-details">
+        <h6><span class="flg-user-sign"></span></h6>
+        <h6><span class="flg-user-id"></span></h6>
+        <h6><span class="flg-user-email"></span></h6>
+        <button class="btn-account btn btn-small z-depth-0">Close</button>
       </div>
     </div>
+  </div>
 
-    <footer>
-      <a
-        class="footer-link right"
-        href="/"
-        target="_blank"
-        >www.fortlauderdale.gov</a
-      >
-    </footer>
+  <footer>
+    <a class="footer-link right" href="/" target="_blank">www.fortlauderdale.gov</a>
+  </footer>
 
-    <script src="/js/ui.js"></script>
-    <script src="/js/app.js"></script>
-    <script type="module" src="/js/db.js"></script>
-    <script type="module" src="/js/auth.js"></script>
-  </body>
+  <script src="/js/ui.js"></script>
+  <script src="/js/app.js"></script>
+  <script type="module" src="/js/db.js"></script>
+  <script type="module" src="/js/auth.js"></script>
+</body>
+
 </html>

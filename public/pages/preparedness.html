@@ -2,18 +2,20 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8"/>
-<link rel="apple-touch-icon" href="/img/icons/icon-192x192.png"/>
-<meta name="theme-color" content="#005996"/>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" sizes="any" /><!-- link32×32 -->
+    <link rel="icon" href="/img/icon-img/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/img/icon-img/apple-touch-icon.png" /><!-- 180×180 -->
+    <meta name="theme-color" content="#005996" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FTL Weather App</title>
     <link rel="stylesheet" href="/css/materialize.min.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="/css/app.css">
     <script type="text/javascript" src="/js/materialize.min.js"></script>
-    <meta property="og:image" content="/img/icons/icon-192x192.png">
+    <meta property="og:image" content="/img/og-image.png" />
     <link rel="manifest" href="/manifest.json">
 </head>
 
@@ -21,7 +23,7 @@
 <body>
     <nav>
         <div class="nav-wrapper ftl-logo">
-            <a href="/"><span>FTL</span>  Weather</a>
+            <a href="/"><span>FTL</span> Weather</a>
             <span class="right grey-text text-darken-1">
                 <i class="material-icons sidenav-trigger" data-target="side-menu">menu</i>
             </span>
@@ -29,43 +31,47 @@
     </nav>
 
     <ul id="side-menu" class="sidenav side-menu">
-        <br/>
+        <br />
         <li><a href="/" class="waves-effect"><i class="material-icons">home</i>Home</a></li>
-        <li><a href="/pages/gov-feeds.html" class="waves-effect"><i class="material-icons">dashboard</i>GOV RSS Feeds</a></li>
-	    <li><a href="/pages/preparedness.html" class="waves-effect"><i class="material-icons">add_box</i>Resources</a></li>
-        <li><a href="mailto:contact@ftl.com?subject=Contact from FTL Weather App" target="_blank" class="waves-effect"><i class="material-icons">mail_outline</i>Contact</a>
+        <li><a href="/pages/gov-feeds.html" class="waves-effect"><i class="material-icons">dashboard</i>GOV RSS
+                Feeds</a></li>
+        <li><a href="/pages/preparedness.html" class="waves-effect"><i class="material-icons">add_box</i>Resources</a>
+        </li>
+        <li><a href="mailto:contact@ftl.com?subject=Contact from FTL Weather App" target="_blank"
+                class="waves-effect"><i class="material-icons">mail_outline</i>Contact</a>
 
         </li>
     </ul>
 
     <!-- Content -->
     <div class="container grey-text">
-  
-        <br/>
+
+        <br />
 
         <div class="row">
-        
+
             <h5 class="z-depth-0 feed-head head-2 template-top-pad">Floridadisaster.org Feed</h5>
 
-    <div style="overflow: hidden; margin: -14px auto 88px; max-width: 983px;">
-        <iframe id="hurr-prep" title="floridadisaster.org" src="https://www.floridadisaster.org/weather/" >
-        </iframe>
+            <div style="overflow: hidden; margin: -14px auto 88px; max-width: 983px;">
+                <iframe id="hurr-prep" title="floridadisaster.org" src="https://www.floridadisaster.org/weather/">
+                </iframe>
+            </div>
+
+
         </div>
-        
-
-    </div>
     </div>
 
 
-   
-  <footer>
-  
+
+    <footer>
+
         <a class="footer-link right" href="/" target="_blank">www.fortlauderdale.gov</a>
-   
-     </footer>
 
-     <script src="/js/ui.js"></script>
+    </footer>
+
+    <script src="/js/ui.js"></script>
     <script src="/js/app.js"></script>
     <script type="module" src="/js/db.js"></script>
-    </body>
-    </html>
+</body>
+
+</html>
