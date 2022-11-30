@@ -188,7 +188,7 @@ img {border:0px;}
 }
 
 .ftl-logo {
-	background-image: url("/img/ftl-logo.png");
+	background-image: url("/public/img/ftl-logo.png");
 	background-repeat: no-repeat;
 	background-position: top left;
 	background-size: 62px;

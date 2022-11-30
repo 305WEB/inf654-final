@@ -1,5 +1,5 @@
-const staticCache = "Static-cache-v35";
-const dynamicCache = "Dynamic-cache-v35";
+const staticCache = "Static-cache-v36";
+const dynamicCache = "Dynamic-cache-v36";
 
 const assets = [
   "/",
@@ -22,9 +22,9 @@ const limitCacheSize = (name, size) => {
       if (keys.length > size) {
         cache.delete(keys[0]).then(limitCacheSize(name, size));
       }
-    })
-  })
-}
+    });
+  });
+};
 
 self.addEventListener("install", function (event) {
   //fires when the browser install the app
@@ -65,28 +65,26 @@ self.addEventListener("fetch", function (event) {
 
   // IF URL CONTAINS "firestore.googleapis.com" DON'T EXECUTE CODE
   if (event.request.url.indexOf("firestore.googleapis.com") === -1) {
-    
     event.respondWith(
-    caches
-      .match(event.request)
-      .then((response) => {
-        return (
-          response ||
-          fetch(event.request).then((fetchResult) => {
-            return caches.open(dynamicCache).then((cache) => {
-              cache.put(event.request.url, fetchResult.clone()); 
-              limitCacheSize(dynamicCache, 18); // cache.put(key, value)  = REQUEST IS THE "KEY", RESPONNSE IS THE "VALUE" 
-                                                              // E.g. = cache.put(event.request.url, fetchResult.clone())
-              return fetchResult;
-            });
-          })
-        );
-      })
-      .catch(() => caches.match("/pages/fallback.html"))
-  );
-}
+      caches
+        .match(event.request)
+        .then((response) => {
+          return (
+            response ||
+            fetch(event.request).then((fetchResult) => {
+              return caches.open(dynamicCache).then((cache) => {
+                cache.put(event.request.url, fetchResult.clone());
+                limitCacheSize(dynamicCache, 18); // cache.put(key, value)  = REQUEST IS THE "KEY", RESPONNSE IS THE "VALUE"
+                // E.g. = cache.put(event.request.url, fetchResult.clone())
+                return fetchResult;
+              });
+            })
+          );
+        })
+        .catch(() => caches.match("/pages/fallback.html"))
+    );
+  }
 });
-
 
 // ------------------------------------------------------------------------------------------------------- ONLINE//OFFLINE TEST
 
