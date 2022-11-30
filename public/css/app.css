@@ -415,4 +415,10 @@ iframe {
 }
 }
 
+@media (hover: none) {
+  #top-notification-area {
+    display: none;
+  }
+}
+
 
